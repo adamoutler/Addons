@@ -1,36 +1,28 @@
-name: 'Submodules Sync'
+name: Send submodule updates to parent repo
 
 on:
-  # Allows you to run this workflow manually from the Actions tab or through HTTP API
-  workflow_dispatch:
+  push:
+    branches: 
+      - main
 
 jobs:
-  sync:
-    name: 'Submodules Sync'
+  update:
     runs-on: ubuntu-latest
 
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
-
     steps:
-    # Checkout the repository to the GitHub Actions runner
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.CI_TOKEN }}
-        submodules: true
+      - uses: actions/checkout@v2
+        with: 
+          repository: adamoutler/Addons
+          token: ${{ secrets.CI_TOKEN }}
 
-    # Update references
-    - name: Git Sumbodule Update
-      run: |
-        git pull --recurse-submodules
-        git submodule update --remote --recursive
-
-    - name: Commit update
-      run: |
-        git config --global user.name 'Git bot'
-        git config --global user.email 'bot@noreply.github.com'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"
+      - name: Pull & update submodules recursively
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
+      - name: Commit
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions - update submodules"
+          git add --all
+          git commit -m "Update submodules" || echo "No changes to commit"
+          git push
