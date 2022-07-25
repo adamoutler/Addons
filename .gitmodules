@@ -1,21 +1,28 @@
 [submodule "HassOSConfigurator"]
 	path = HassOSConfigurator
 	url = https://github.com/adamoutler/HassOSConfigurator
+	branch = head
 [submodule "anycubic-3d-printer-ha-addon"]
 	path = anycubic-3d-printer-ha-addon
 	url = https://github.com/adamoutler/anycubic-3d-printer-ha-addon
+	branch = head
 [submodule "HassOSArgonOneAddon"]
 	path = HassOSArgonOneAddon
 	url = https://github.com/adamoutler/HassOSArgonOneAddon
+	branch = head
 [submodule "MinimalChatExtremeAddon"]
 	path = MinimalChatExtremeAddon
 	url = https://github.com/adamoutler/MinimalChatExtremeAddon
+	branch = head
 [submodule "Actum-Non-Grata-Hass-Addons"]
 	path = Actum-Non-Grata-Hass-Addons
 	url = https://github.com/adamoutler/Actum-Non-Grata-Hass-Addons
+	branch = head
 [submodule "HassOSDeskPiPro"]
 	path = HassOSDeskPiPro
 	url = https://github.com/adamoutler/HassOSDeskPiPro
+	branch = head
 [submodule "HassOSRPITempSensor"]
 	path = HassOSRPITempSensor
 	url = https://github.com/adamoutler/HassOSRPITempSensor
+	branch = head
