@@ -12,7 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with: 
-          repository: adamoutler/Addons
           token: ${{ secrets.CI_TOKEN }}
 
       - name: Pull & update submodules recursively
