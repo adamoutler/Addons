@@ -1,6 +1,8 @@
 name: Send submodule updates to parent repo
 
 on:
+  schedule:
+    -cron: "0 0,12,18 * * *"
   push:
     branches: 
       - main
