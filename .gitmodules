@@ -16,3 +16,6 @@
 [submodule "HassOSRPITempSensor"]
 	path = HassOSRPITempSensor
 	url = https://github.com/adamoutler/HassOSRPITempSensor
+[submodule "Actum-Non-Grata-Hass-Addons"]
+	path = Actum-Non-Grata-Hass-Addons
+	url = https://github.com/adamoutler/Actum-Non-Grata-Hass-Addons
