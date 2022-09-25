@@ -19,3 +19,6 @@
 [submodule "Actum-Non-Grata-Hass-Addons"]
 	path = Actum-Non-Grata-Hass-Addons
 	url = https://github.com/adamoutler/Actum-Non-Grata-Hass-Addons
+[submodule "mqtt-explorer"]
+	path = mqtt-explorer
+	url = https://github.com/adamoutler/mqtt-explorer
