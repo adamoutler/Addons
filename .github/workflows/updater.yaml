@@ -1,4 +1,4 @@
-name: Send submodule updates to parent repo
+name: Send submodule updates to parent repo.
 
 on:
   schedule:
